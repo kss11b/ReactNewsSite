@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^1.4.3",
     "clean-webpack-plugin": "^0.1.19",
     "concurrently": "^3.6.1",
     "ejs": "2.6.1",

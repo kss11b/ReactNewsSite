@@ -35,6 +35,10 @@
   list-style-type: none;
 }
 
+.articleCards {
+  background: #8bc34a;
+}
+
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
