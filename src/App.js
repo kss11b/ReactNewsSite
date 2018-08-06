@@ -37,12 +37,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <AppBar position="static" color="default">
           {/* <header className="App-header"> */}
             <h1 className="App-title">Cruise News</h1>
             <MainMenu />
           {/* </header> */}
-        </AppBar>
             <Route exact path="/home" component={Home}/>
             <Route exact path="/counter" component={Click}/>
             <Route exact path="/tech" component={TechNews}/>

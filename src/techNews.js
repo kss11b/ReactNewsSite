@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {getTechArticles} from './actions/index.js'
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Card from '@material-ui/core/Card';
-import Button from '@material-ui/core/button';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid';
-import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
+import {Row, Col, Card, CardTitle, Button} from 'react-materialize'
 import './App.css';
 
 class TechNews extends Component {
@@ -22,20 +14,17 @@ componentDidMount() {
 
 createArticleCards = articles => {
   console.log('map articles', articles.articles)
-  return articles.map(x =>
-    <Grid item xs={4} key={x.title}>
-      <Card className='articleCards'>
-        {/* <CardMedia
-          // image={x.urlToImage}
-          height={0}
-          src={x.urlToImage}
-          title="Contemplative Reptile"
-        /> */}
-        <CardContent className='articleCards'>
-          <Typography gutterBottom variant="headline" component="h2" key={x.title}>{x.title}</Typography><Typography component="p">{x.description}</Typography><Button type="button" href={x.url}>Read More</Button>
-        </CardContent>
+  return articles.map(x => (
+<div key={x.title}>
+  <Col s={4}>
+    {/* header={<CardTitle image={x.urlToImage} />} */}
+      <Card className="blue" title={x.title} >
+        <p>{x.description}</p>
+        <Button waves='light' node='a' href={x.url}> Read More</Button>
       </Card>
-  </Grid>
+  </Col>
+</div>
+)
   )
 }
 
@@ -47,16 +36,12 @@ createArticleCards = articles => {
     const { techArticles } = this.props;
     return (
       <div>
-      <Grid container justify='center' spacing={8}>
-        <Grid item xs={12}>
           <h1>Tech Articles</h1>
-        </Grid>
-      </Grid>
-      <Grid container direction="row" justify="center" alignItems="stretch">
+        <Row>
         {
         techArticles ? this.createArticleCards(techArticles) : <CircularProgress size={50}/>
         }
-    </Grid>
+      </Row>
   </div>
     )
   }
