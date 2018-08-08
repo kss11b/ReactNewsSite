@@ -37,7 +37,17 @@
 
 .articleCards {
   background: #8bc34a;
+  height: 300px;
 }
+
+.card-button {
+  position: absolute;
+  bottom: 15px;
+}
+
+/* .card-button {
+  vertical-align: bottom;
+} */
 
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

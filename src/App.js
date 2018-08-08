@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {Row, Col, Card, CardTitle, Button, Navbar, NavItem} from 'react-materialize'
 import Click from './click.js'
 import TechNews from './techNews.js'
 import AppBar from '@material-ui/core/AppBar';
@@ -37,10 +38,23 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {/* <header className="App-header"> */}
-            <h1 className="App-title">Cruise News</h1>
-            <MainMenu />
-          {/* </header> */}
+            <Navbar className='blue darken-1'>
+              <NavItem>
+                <Link to="/home">
+                  Home
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link to="/counter">
+                  Counter
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link to="/tech">
+                  Tech News
+                </Link>
+              </NavItem>
+            </Navbar>
             <Route exact path="/home" component={Home}/>
             <Route exact path="/counter" component={Click}/>
             <Route exact path="/tech" component={TechNews}/>
