@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import { createArticleCards } from './articleHelpers.js'
-import {getTechArticles} from './actions/index.js'
+import {getBusinessArticles} from './actions/index.js'
 import {Row, Col, Card, CardTitle, Button, Preloader} from 'react-materialize'
 import './App.css';
 
-class TechNews extends Component {
+class BusinessNews extends Component {
 
 componentDidMount() {
   console.log('tech mounted')
-  this.props.getTechArticles()
+  this.props.getBusinessArticles()
 }
 
   render(){
     console.log(
-      'tech render', techArticles
+      'tech render', businessArticles
     )
-    const { techArticles } = this.props;
+    const { businessArticles } = this.props;
     return (
       <div>
-          <h1>Tech Articles</h1>
+          <h1>Business Articles</h1>
         <Row>
         {
-        techArticles ? createArticleCards(techArticles) :  <Preloader size='big'/>
+        businessArticles ? createArticleCards(businessArticles) :  <Preloader size='big'/>
         }
       </Row>
   </div>
@@ -32,10 +32,10 @@ componentDidMount() {
 export default connect(
   (state, ownProps) => {
     return {
-      techArticles: state.techArticles,
+      businessArticles: state.businessArticles,
     };
   },
   {
-    getTechArticles,
+    getBusinessArticles,
   }
-)(TechNews);
+)(BusinessNews);
