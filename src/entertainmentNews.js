@@ -8,14 +8,13 @@ import './App.css';
 class EntertainmentNews extends Component {
 
 componentDidMount() {
-  console.log('tech mounted')
   this.props.getEntertainmentArticles()
+}
+componentDidUpdate() {
+
 }
 
   render(){
-    console.log(
-      'entertatinment render', entertainmentArticles
-    )
     const { entertainmentArticles } = this.props;
     return (
       <div>

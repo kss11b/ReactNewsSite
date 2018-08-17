@@ -1,10 +1,10 @@
 import { GET_BUSINESS_ARTICLES_SUCCESS } from "../actions/index.js";
+import { fromJS } from 'immutable'
 
 const businessArticlesReducer = (state = [], action) => {
   switch (action.type) {
     case GET_BUSINESS_ARTICLES_SUCCESS:
-    console.log('business action', action.payload)
-      return action.payload.articles;
+      return fromJS(action.payload).get('articles');
     default:
       return state;
   }

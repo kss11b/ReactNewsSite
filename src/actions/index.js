@@ -24,7 +24,7 @@ export const GET_ENTERTAINMENT_ARTICLES = "GET_POLITICAL_ARTICLES";
 export const GET_ENTERTAINMENT_ARTICLES_SUCCESS = "GET_POLITICAL_ARTICLES_SUCCESS";
 export const GET_ENTERTAINMENT_ARTICLES_FAILURE = "GET_POLITICAL_ARTICLES_FAILURE";
 
-export const getTechArticles = () => {console.log('getTechArticles'); return (
+export const getTechArticles = () => (
   {
     [RSAA] :
     {
@@ -33,9 +33,9 @@ export const getTechArticles = () => {console.log('getTechArticles'); return (
       method: 'GET',
       endpoint: '/api/getTechArticles',
   }
-})};
+});
 
-export const getSportsArticles = () => {console.log('getSportsArticles'); return (
+export const getSportsArticles = () => (
   {
     [RSAA] :
     {
@@ -44,9 +44,9 @@ export const getSportsArticles = () => {console.log('getSportsArticles'); return
       method: 'GET',
       endpoint: '/api/getSportsArticles',
   }
-})};
+});
 
-export const getBusinessArticles = () => {console.log('getBusinessArticles'); return (
+export const getBusinessArticles = () =>  (
   {
     [RSAA] :
     {
@@ -55,9 +55,9 @@ export const getBusinessArticles = () => {console.log('getBusinessArticles'); re
       method: 'GET',
       endpoint: '/api/getBusinessArticles',
   }
-})};
+});
 
-export const getScienceArticles = () => {console.log('getScienceArticles'); return (
+export const getScienceArticles = () =>  (
   {
     [RSAA] :
     {
@@ -66,9 +66,9 @@ export const getScienceArticles = () => {console.log('getScienceArticles'); retu
       method: 'GET',
       endpoint: '/api/getScienceArticles',
   }
-})};
+});
 
-export const getPoliticalArticles = () => {console.log('getPoliticalArticles'); return (
+export const getPoliticalArticles = () => (
   {
     [RSAA] :
     {
@@ -77,9 +77,9 @@ export const getPoliticalArticles = () => {console.log('getPoliticalArticles'); 
       method: 'GET',
       endpoint: '/api/getPoliticalArticles',
   }
-})};
+});
 
-export const getEntertainmentArticles = () => {console.log('getEntertainmentArticles'); return (
+export const getEntertainmentArticles = () =>  (
   {
     [RSAA] :
     {
@@ -88,4 +88,4 @@ export const getEntertainmentArticles = () => {console.log('getEntertainmentArti
       method: 'GET',
       endpoint: '/api/getEntertainmentArticles',
   }
-})};
+});
